@@ -3,14 +3,14 @@ export const statusList = ["Без статуса", "Нужно сделать",
 export const tasks = [
     {
         id: 1,
-        date: '32.01.120',
+        date: '32.01.120 до н.э.',
         topic: "Web design",
         title: "Название задачи",
         status: "Без статуса",
     },
     {
         id: 7,
-        date: '32.01.120',
+        date: '32.01.120 после н.э.',
         topic: "Copywriting",
         title: "Название задачи",
         status: "Без статуса",
