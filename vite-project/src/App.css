@@ -1087,3 +1087,10 @@ body {
     display: block;
   }
 }
+
+.loaderImg {
+  margin-left: 50vh;
+  width: 800px;
+  height: 89vh;
+}
+

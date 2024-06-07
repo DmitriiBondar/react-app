@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { Header } from './components/Header/index'
 import { Main } from './components/Main/index'
@@ -6,10 +6,12 @@ import { tasks } from './data'
 import { PopBrowse } from './components/PopBrowse'
 import { PopNewCard } from './components/PopNewCard'
 import { Exit } from './components/PopUser'
+import loader from '/images/loader.gif'
 
 function App() {
 
   const [cards, setCards] = useState(tasks)
+  const [isLoading, setIsLoading] = useState(false)
   const addCard = () => {
     const newCard = {
       id: cards.length + 1,
@@ -21,13 +23,20 @@ function App() {
     setCards([...cards, newCard])
   }
 
+  useEffect(() => {
+    setIsLoading(true)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 3000)
+  }, [])
+
   return (
     <div className="wrapper">
       <Exit />
       <PopNewCard />
       <PopBrowse />
       <Header addCard={addCard}/>
-      <Main cards={cards} />
+      {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
     </div>
   )
 }
