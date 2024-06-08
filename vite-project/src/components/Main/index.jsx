@@ -1,5 +1,4 @@
 import { Column } from "../Column";
-import { tasks } from "../../data.js";
 import { statusList } from "../../data.js";
 export const Main = ({cards}) => {
     return (
