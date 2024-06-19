@@ -7,6 +7,7 @@ import { PopBrowse } from './components/PopBrowse'
 import { PopNewCard } from './components/PopNewCard'
 import { Exit } from './components/PopUser'
 import loader from '/images/loader.gif'
+import { GlobalStyle } from './globalStyle.styled'
 
 function App() {
 
@@ -27,17 +28,21 @@ function App() {
     setIsLoading(true)
     setTimeout(() => {
       setIsLoading(false)
-    }, 3000)
+    }, 1000)
   }, [])
 
   return (
-    <div className="wrapper">
-      <Exit />
-      <PopNewCard />
-      <PopBrowse />
-      <Header addCard={addCard}/>
-      {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
-    </div>
+    <>
+      <GlobalStyle/>
+      <div className="wrapper">
+        <Exit />
+        <PopNewCard />
+        <PopBrowse />
+        <Header addCard={addCard}/>
+        {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
+      </div>
+    </>
+    
   )
 }
 
