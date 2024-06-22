@@ -7,7 +7,7 @@ import { PopBrowse } from './components/PopBrowse'
 import { PopNewCard } from './components/PopNewCard'
 import { Exit } from './components/PopUser'
 import loader from '/images/loader.gif'
-import { GlobalStyle } from './globalStyle.styled'
+import { GlobalStyle, Wrapper } from './globalStyle.styled'
 
 function App() {
 
@@ -34,13 +34,13 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-      <div className="wrapper">
+      <Wrapper>
         <Exit />
         <PopNewCard />
         <PopBrowse />
         <Header addCard={addCard}/>
         {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
-      </div>
+      </Wrapper>
     </>
     
   )
