@@ -78,7 +78,7 @@ export const HeaderUser = styled.a`
   border-radius: 1px;
   border-left: 1.9px solid #565EEF;
   border-bottom: 1.9px solid #565EEF;
-  transform: rotate(-45deg);
+  transform: rotate(${(props) => props.$isOpen ? '135deg' : '-45deg'});
   margin: -6px 0 0 5px;
   padding: 0;
 }

@@ -52,6 +52,30 @@ export const Container = styled.div`
   padding: 0 30px;
 `
 
+export const Orange = css`
+  background-color: ${({theme}) => theme.orangeBg};
+  color: ${({theme}) => theme.orangeText};
+`
+export const Green = css`
+  background-color: ${({theme}) => theme.greenBg};
+  color: ${({theme}) => theme.greenText};
+`
+export const Purple = css`
+  background-color: ${({theme}) => theme.purpleBg};
+  color: ${({theme}) => theme.purpleText};
+`
+export const Gray = css`
+  background: ${({theme}) => theme.grayBg};
+  color: ${({theme}) => theme.grayText};
+`
+
+export const colorsTheme = (topic) => css`
+  ${topic === "Web design" && Orange}
+  ${topic === "Copywriting" && Purple}
+  ${topic === "Research" && Green}
+  ${!topic && Gray}
+`
+
 export const Hover01 = css`
   &:hover {
     background-color: #33399b;

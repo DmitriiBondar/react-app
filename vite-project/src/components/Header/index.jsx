@@ -2,11 +2,15 @@ import { useState } from "react"
 import * as H from "./header.styled"
 import { Container } from "../../globalStyle.styled"
 
-export const Header = ({addCard}) => {
+export const Header = ({addCard, changeTheme, setChangeTheme}) => {
 
 	const [isOpen, setIsOpen] = useState(false)
 	const toggleOpenUser = () => {
 		setIsOpen((prev) => !prev)
+	}
+
+	const onChangeTheme = () => {
+		setChangeTheme(changeTheme === "light" ? "dark" : "light")
 	}
 
     return (
@@ -21,14 +25,14 @@ export const Header = ({addCard}) => {
 					</H.HeaderLogoDark>
 					<H.Nav>
 						<H.HeaderBtnNew onClick={addCard} id="btnMainNew"><a>Создать новую задачу</a></H.HeaderBtnNew>
-						<H.HeaderUser onClick={toggleOpenUser}>Ivan Ivanov</H.HeaderUser>
+						<H.HeaderUser $isOpen={isOpen} onClick={toggleOpenUser}>Ivan Ivanov</H.HeaderUser>
 						{isOpen && (
 							<H.HeaderPopUserSet id="user-set-target">
 								<H.PopUserName>Ivan Ivanov</H.PopUserName>
 								<H.PopUserMail className="pop-user-set__mail">ivan.ivanov@gmail.com</H.PopUserMail>
 								<H.PopUserTheme>
 									<p>Темная тема</p>
-									<input type="checkbox" className="checkbox" name="checkbox"/>
+									<input checked={changeTheme === "dark"} onClick={onChangeTheme} type="checkbox" className="checkbox" name="checkbox"/>
 								</H.PopUserTheme>
 								<H.PopBtn type="button"><a href="#popExit">Выйти</a></H.PopBtn>
 							</H.HeaderPopUserSet>

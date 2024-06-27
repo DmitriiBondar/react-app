@@ -8,11 +8,14 @@ import { PopNewCard } from './components/PopNewCard'
 import { Exit } from './components/PopUser'
 import loader from '/images/loader.gif'
 import { GlobalStyle, Wrapper } from './globalStyle.styled'
+import { ThemeProvider } from 'styled-components'
+import { dark, light } from './theme'
 
 function App() {
 
   const [cards, setCards] = useState(tasks)
   const [isLoading, setIsLoading] = useState(false)
+  const [changeTheme, setChangeTheme] = useState("light")
   const addCard = () => {
     const newCard = {
       id: cards.length + 1,
@@ -32,16 +35,16 @@ function App() {
   }, [])
 
   return (
-    <>
+    <ThemeProvider theme={changeTheme === "light" ? light : dark}>
       <GlobalStyle/>
       <Wrapper>
         <Exit />
         <PopNewCard />
         <PopBrowse />
-        <Header addCard={addCard}/>
+        <Header addCard={addCard} setChangeTheme={setChangeTheme} changeTheme={changeTheme}/>
         {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
       </Wrapper>
-    </>
+    </ThemeProvider>
     
   )
 }
