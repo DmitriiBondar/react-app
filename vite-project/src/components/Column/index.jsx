@@ -1,17 +1,21 @@
-import { Card } from "../Card"
-
-export const Column = ({title}) => {
+import { Card } from "../Card";
+export const Column = ({title, cards}) => {
     return (
-        <div class="main__column column">
-            <div class="column__title">
+        <div className="main__column column">
+            <div className="column__title">
                 <p>{title}</p>
             </div>
-            <div class="cards">
-                <Card cardTitle="Web Design" />
-                <Card cardTitle="Research" />
-                <Card cardTitle="Web Design" />
-                <Card cardTitle="Copywriting" />
-                <Card cardTitle="Web Design" />
+            <div className="cards">
+                {cards.map((card) => {
+                    return (
+                        <Card 
+                            key={card.id} 
+                            cardTitle={card.title} 
+                            topic={card.topic}
+                            date={card.date}
+                        />
+                    )
+                })}
             </div>
         </div>	
     )
