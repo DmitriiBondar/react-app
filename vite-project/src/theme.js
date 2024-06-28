@@ -8,6 +8,10 @@ export const light = {
     greenBg: "#B4FDD1",
     purpleBg: "#E9D4FF",
     grayBg: "#94A6BE",
+    bgCard: "#FFFFFF",
+    titleColor: "#000000",
+    headerDisplayDark: "none",
+    userColor: "#565EEF",
 }
 
 export const dark = {
@@ -20,4 +24,8 @@ export const dark = {
     greenBg: "#06B16E",
     purpleBg: "#9A48F1",
     grayBg: "#FFFFFF",
+    bgCard: "#20202C",
+    titleColor: "#FFFFFF",
+    headerDisplayLight: "none",
+    userColor: "#FFFFFF",
 }

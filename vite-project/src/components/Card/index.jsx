@@ -9,16 +9,16 @@ export const Card = ({cardTitle, topic, date}) => {
                         <p>{topic}</p>
                     </K.Theme>
                     <a href="#popBrowse" target="_self">
-                        <div className="card__btn">
+                        <K.cardBtn>
                             <div></div>
                             <div></div>
                             <div></div>
-                        </div>
+                        </K.cardBtn>
                     </a>
                 </K.Group>
                 <K.Content>
                     <a href="" target="_blank">
-                        <h3 className="card__title">{cardTitle}</h3>
+                        <K.cardTitle>{cardTitle}</K.cardTitle>
                     </a>
                     <K.Date>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">

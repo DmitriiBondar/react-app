@@ -104,10 +104,6 @@ export const Hover03 = css`
   }
 `
 
-export const Dark = css`
-  display: none;
-`
-
 export const PopTarget = css`
   &:target {
     display: block;

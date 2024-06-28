@@ -45,7 +45,6 @@ function App() {
         {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
       </Wrapper>
     </ThemeProvider>
-    
   )
 }
 

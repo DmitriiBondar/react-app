@@ -22,7 +22,7 @@ export const CardsItem = styled.div`
 export const Card = styled.div`
   width: 220px;
   height: 130px;
-  background-color: #FFFFFF;
+  background-color: ${({theme}) => theme.bgCard};
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -55,12 +55,36 @@ export const Theme = styled.div`
   }
 `
 
+export const cardBtn = styled.div`
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
+
+  div {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #94A6BE;
+  }
+`
+
 export const Content = styled.div`
   height: 64px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+`
+
+export const cardTitle = styled.h3`
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: ${({theme}) => theme.titleColor};
+  margin-bottom: 10px;
 `
 
 export const Date = styled.div`

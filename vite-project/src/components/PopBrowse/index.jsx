@@ -61,8 +61,7 @@ export const PopBrowse = () => {
                                 <button className="btn-edit__delete _btn-bor _hover03" id="btnDelete"><a href="#">Удалить задачу</a></button>
                             </div>
                             <button className="btn-edit__close _btn-bg _hover01"><a href="#">Закрыть</a></button>
-                        </div>
-                                                
+                        </div>                   
                     </div>
                 </div>
             </div>
