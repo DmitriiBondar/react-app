@@ -12,6 +12,7 @@ export const light = {
     titleColor: "#000000",
     headerDisplayDark: "none",
     userColor: "#565EEF",
+    chekColor: "#94A6BE",
 }
 
 export const dark = {
@@ -28,4 +29,5 @@ export const dark = {
     titleColor: "#FFFFFF",
     headerDisplayLight: "none",
     userColor: "#FFFFFF",
+    chekColor: "#565EEF",
 }

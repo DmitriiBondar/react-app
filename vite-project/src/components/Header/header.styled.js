@@ -169,7 +169,7 @@ export const PopUserTheme = styled.div`
     width: 11px;
     height: 11px;
     border-radius: 50%;
-    background-color: #94A6BE;
+    background-color: ${({theme}) => theme.chekColor};
     transition: 0.5s;
   }
 

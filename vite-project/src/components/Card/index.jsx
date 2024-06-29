@@ -18,7 +18,7 @@ export const Card = ({cardTitle, topic, date}) => {
                 </K.Group>
                 <K.Content>
                     <a href="" target="_blank">
-                        <K.cardTitle>{cardTitle}</K.cardTitle>
+                        <K.cardTitle><b>{cardTitle}</b></K.cardTitle>
                     </a>
                     <K.Date>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
