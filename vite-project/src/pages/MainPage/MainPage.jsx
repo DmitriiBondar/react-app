@@ -3,11 +3,11 @@ import { Header } from '../../components/Header/index'
 import { Main } from '../../components/Main/index'
 import { tasks } from '../../data'
 import { PopNewCard } from '../../components/PopNewCard'
-import { Wrapper } from '../../globalStyle.styled'
+import { LoaderImg, Wrapper } from '../../globalStyle.styled'
 import loader from '/images/loader.gif'
 import { Outlet } from 'react-router-dom'
 
-export const MainPage = ({changeTheme, setChangeTheme, setIsAuth}) => {
+export const MainPage = ({changeTheme, setChangeTheme}) => {
 
     const [cards, setCards] = useState(tasks)
     const [isLoading, setIsLoading] = useState(false)
@@ -27,7 +27,7 @@ export const MainPage = ({changeTheme, setChangeTheme, setIsAuth}) => {
         setIsLoading(true)
         setTimeout(() => {
           setIsLoading(false)
-        }, 1000)
+        }, 5500)
     }, [])
 
     return (
@@ -37,7 +37,7 @@ export const MainPage = ({changeTheme, setChangeTheme, setIsAuth}) => {
             <PopNewCard />
             {/* <PopBrowse /> */}
             <Header addCard={addCard} setChangeTheme={setChangeTheme} changeTheme={changeTheme}/>
-            {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
+            {isLoading ? <LoaderImg src={loader} alt='loader'/> : <Main cards={cards}/>}
         </Wrapper>
     )
 }

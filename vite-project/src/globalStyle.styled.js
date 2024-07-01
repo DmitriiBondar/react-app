@@ -109,3 +109,17 @@ export const PopTarget = css`
     display: block;
   }
 `
+
+export const LoaderImg = styled.img`
+  margin-left: 30%;
+  margin-top: 6%;
+  width: 600px;
+  height: 400px;
+`
+
+export const Subttl = css`
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+`

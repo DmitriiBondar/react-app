@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Hover02, Hover01, PopTarget, Hover03 } from "../../globalStyle.styled";
 
 export const Header = styled.header`
-    width: 100%;
-    margin: 0 auto;
-    background-color: ${({theme}) => theme.bgCard};
+  width: 100%;
+  margin: 0 auto;
+  background-color: ${({theme}) => theme.bgCard};
 `
 
 export const HeaderBlock = styled.div`
@@ -55,11 +55,11 @@ export const HeaderBtnNew = styled.button`
   font-weight: 500;
   margin-right: 20px;
 
-a {
-  color: #FFFFFF;
-}
+  a {
+    color: #FFFFFF;
+  }
 
-${Hover01}
+  ${Hover01}
 `
 
 export const HeaderUser = styled.a`

@@ -1,5 +1,7 @@
+import { Err404 } from "./notFound.stuled"
+
 export const NotFound = () => {
     return (
-        <h1>404</h1>
+        <Err404 src="/images/e404.png" alt="404" />
     )
 }

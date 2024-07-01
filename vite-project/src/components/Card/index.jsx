@@ -4,7 +4,7 @@ import * as K from "./card.styled"
 export const Card = ({cardTitle, topic, date, id}) => {
     return (
         <K.CardsItem>
-            <K.Card className="card">
+            <K.Card>
                 <K.Group>
                     <K.Theme $color={topic}>
                         <p>{topic}</p>
