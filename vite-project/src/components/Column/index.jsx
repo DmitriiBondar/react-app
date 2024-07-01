@@ -10,6 +10,7 @@ export const Column = ({title, cards}) => {
                     return (
                         <Card 
                             key={card.id} 
+                            id={card.id}
                             cardTitle={card.title} 
                             topic={card.topic}
                             date={card.date}

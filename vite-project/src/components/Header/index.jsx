@@ -1,6 +1,8 @@
 import { useState } from "react"
 import * as H from "./header.styled"
 import { Container } from "../../globalStyle.styled"
+import { Link } from "react-router-dom"
+import { routes } from "../../Router/routes"
 
 export const Header = ({addCard, changeTheme, setChangeTheme}) => {
 
@@ -34,7 +36,7 @@ export const Header = ({addCard, changeTheme, setChangeTheme}) => {
 									<p>Темная тема</p>
 									<input checked={changeTheme === "dark"} onClick={onChangeTheme} type="checkbox" className="checkbox" name="checkbox"/>
 								</H.PopUserTheme>
-								<H.PopBtn type="button"><a href="#popExit">Выйти</a></H.PopBtn>
+								<H.PopBtn type="button"><Link to={routes.exit}>Выйти</Link></H.PopBtn>
 							</H.HeaderPopUserSet>
 						)}
 					</H.Nav>					

@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react'
 import { Header } from '../../components/Header/index'
 import { Main } from '../../components/Main/index'
 import { tasks } from '../../data'
-import { PopBrowse } from '../../components/PopBrowse'
 import { PopNewCard } from '../../components/PopNewCard'
-import { Exit } from '../../components/PopUser'
 import { Wrapper } from '../../globalStyle.styled'
 import loader from '/images/loader.gif'
+import { Outlet } from 'react-router-dom'
 
-export const MainPage = ({changeTheme, setChangeTheme}) => {
+export const MainPage = ({changeTheme, setChangeTheme, setIsAuth}) => {
 
     const [cards, setCards] = useState(tasks)
     const [isLoading, setIsLoading] = useState(false)
@@ -33,9 +32,10 @@ export const MainPage = ({changeTheme, setChangeTheme}) => {
 
     return (
         <Wrapper>
-            <Exit />
+            {/* <Exit /> */}
+            <Outlet />
             <PopNewCard />
-            <PopBrowse />
+            {/* <PopBrowse /> */}
             <Header addCard={addCard} setChangeTheme={setChangeTheme} changeTheme={changeTheme}/>
             {isLoading ? <img className='loaderImg' src={loader} alt='loader'/> : <Main cards={cards}/>}
         </Wrapper>
